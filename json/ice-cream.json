@@ -1,0 +1,100 @@
+{
+	
+	"title": "Which ice cream flavor are you?",
+	"author": "Daniel Granovetter",
+	"date": "July 12 2019",
+	"img": "which-ice-cream-flavor-are-you",
+	"description": "Do you like ice cream? If you don't, that can only mean one thing: You LOVE ice cream!!! Either way, wouldn't it be nice to know which ice cream flavor you are? Take this quiz to find out!",
+	"random": {"questions": true},
+	"results": {
+					"chocolate": {"name": "Chocolate ice cream", "img": "chocolate", "personality": "You are all about enjoying the simple pleasures of life. You aim to please, and are easy to please!"},
+					"vanilla": {"name": "Vanilla ice cream", "img": "vanilla", "personality": "Some see you as plain, but you are in fact very popular, and an absolute delight to many!"},
+					"strawberry": {"name": "Strawberry ice cream", "img": "strawberry", "personality": "You are a jolly soul, very good at cheering people up. You are the type who can turn a gray and rainy day into a fun day!"},
+					"cookies": {"name": "Cookies n' creme ice cream", "img": "cookies", "personality": "Ice cream or cookies? Why not both! You don't just settle for one thing in life; you take what could be a dilemna and transform it into a win-win for all!"},
+					"mint": {"name": "Mint chocolate chip ice cream", "img": "mint", "personality": "Let's face it, you are not one to settle for average. Average is boring. You need that above-average inspiration; that's what you aim for, and that's what you get!"},
+					"mocha": {"name": "Mocha ice cream", "img": "mocha", "personality": "At times you are full of energy, at other times you unexpectedly crash and are in need of a caffeine fueling to kick you back into gear. You are very goal-oriented and won't stop until the work is complete."},
+					"caramel": {"name": "Caramel ice cream", "img": "caramel", "personality": "You are all about having a fun time, and giving others a fun time!"},
+					"cookie_dough": {"name": "Chocolate chip cookie dough ice cream", "img": "cookie-dough", "personality": "You are totally out of the box, and one of a kind! You love making others happy, in an unforgettable way!"},
+					"pistachio": {"name": "Pistachio ice cream", "img": "pistachio", "personality": "You are an intellectual non-conformist, who doesn't mind being different and standing out. You are always there to share your wisdom with those in need, and are appreciated for your keen insight and uniqueness."},
+					"butter_pecan": {"name": "Butter pecan ice cream", "img": "butter-pecan", "personality": "You are that keen individual who transforms the plain and ordinary into something unique and special!"},
+					"banana": {"name": "Banana ice cream", "img": "banana", "personality": "You are a cool and laid-back individual who knows how to chill and have a good ol' time!"},
+					"cherry": {"name": "Cherry ice cream", "img": "cherry", "personality": "You aim to please, and bring joy to others in a delightfully surprising way!"}
+				},
+	"questions": {
+					"1": {
+							"question": "Where would you most prefer to live?",
+							"answers": {
+											"a": ["The city", {"chocolate": 3, "vanilla": 5, "strawberry": 2, "cookies": 2, "mint": 4, "mocha": 3, "caramel": 1, "cookie_dough": 0, "pistachio": 4, "butter_pecan": 4, "banana": 2, "cherry": 4}],
+											"b": ["The country",  {"chocolate": 4, "vanilla": 3, "strawberry": 2, "cookies": 3, "mint": 4, "mocha": 4, "caramel": 4, "cookie_dough": 4,  "pistachio": 3, "butter_pecan": 3, "banana": 0, "cherry": 2}],
+											"c": ["The suburbs", {"chocolate": 3, "vanilla": 3, "strawberry": 4, "cookies": 3, "mint": 3, "mocha": 3, "caramel": 4, "cookie_dough": 4, "pistachio": 3, "butter_pecan": 3, "banana": 3, "cherry": 4}],
+											"d": ["By the seashore", {"chocolate": 1, "vanilla": 2, "strawberry": 4, "cookies": 3, "mint": 3, "mocha": 1, "caramel": 2, "cookie_dough": 2, "pistachio": 4, "butter_pecan": 2, "banana": 5, "cherry": 2}]
+										}
+						
+						},
+					"2": {
+							"question": "What's your favorite style music?",
+							"answers": {
+											"a": ["Rock n' roll", {"chocolate": 4, "vanilla": 2, "strawberry": 0, "cookies": 3, "mint": 4, "mocha": 3, "caramel": 4, "cookie_dough": 3, "pistachio": 4, "butter_pecan": 3, "banana": 4, "cherry": 4}],
+											"b": ["Jazz", {"chocolate": 1, "vanilla": 4, "strawberry": 3, "cookies": 1, "mint": 3, "mocha": 4, "caramel": 1, "cookie_dough": 1, "pistachio": 1, "butter_pecan": 2, "banana": 3, "cherry": 4}],
+											"c": ["Classical", {"chocolate": 3, "vanilla": 5, "strawberry": 3, "cookies": 3, "mint": 2, "mocha": 3, "caramel": 2, "cookie_dough": 2, "pistachio": 2, "butter_pecan": 3, "banana": 2, "cherry": 2}],
+											"d": ["Reggae", {"chocolate": 0, "vanilla": 2, "strawberry": 3, "cookies": 2, "mint": 4, "mocha": 4, "caramel": 2, "cookie_dough": 3, "pistachio": 4, "butter_pecan": 3, "banana": 5, "cherry": 1}],
+											"e": ["Country", {"chocolate": 3, "vanilla": 4, "strawberry": 2, "cookies": 4, "mint": 3, "mocha": 3, "caramel": 4, "cookie_dough": 4, "pistachio": 3, "butter_pecan": 2, "banana": 2, "cherry": 2}]
+										}
+						},
+					"3": {
+							"question": "What's your favorite healthy snack?",
+							"answers": {
+											"a": ["Fresh fruit", {"chocolate": 1, "vanilla": 3, "strawberry": 5, "cookies": 1, "mint": 2, "mocha": 1, "caramel": 1, "cookie_dough": 0, "pistachio": 2, "butter_pecan": 1, "banana": 5, "cherry": 5}],
+											"b": ["Nuts", {"chocolate": 3, "vanilla": 4, "strawberry": 1, "cookies": 1, "mint": 2, "mocha": 3, "caramel": 3, "cookie_dough": 3, "pistachio": 5, "butter_pecan": 5, "banana": 1, "cherry": 1}],
+											"c": ["Cereal", {"chocolate": 3, "vanilla": 2, "strawberry": 3, "cookies": 4, "mint": 1, "mocha": 3, "caramel": 2, "cookie_dough": 3, "pistachio": 1, "butter_pecan": 3, "banana": 4, "cherry": 3}],
+											"d": ["Granola bar", {"chocolate": 4, "vanilla": 1, "strawberry": 3, "cookies": 1, "mint": 1, "mocha": 2, "caramel": 4, "cookie_dough": 2, "pistachio": 3, "butter_pecan": 3, "banana": 2, "cherry": 2}],
+											"e": ["I don't like healthy snacks!", {"chocolate": 5, "vanilla": 2, "strawberry": 1, "cookies": 4, "mint": 3, "mocha": 4, "caramel": 5, "cookie_dough": 5, "pistachio": 3, "butter_pecan": 3, "banana": 1, "cherry": 1}]
+										}
+						},
+					"4": {
+							"question": "What's your favorite dessert besides ice cream?",
+							"answers": {
+											"a": ["Cake", {"chocolate": 4, "vanilla": 4, "strawberry": 3, "cookies": 1, "mint": 2, "mocha": 4, "caramel": 2, "cookie_dough": 3, "pistachio": 1, "butter_pecan": 2, "banana": 4, "cherry": 3}],
+											"b": ["Cookies", {"chocolate": 4, "vanilla": 4, "strawberry": 2, "cookies": 5, "mint": 4, "mocha": 2, "caramel": 3, "cookie_dough": 5, "pistachio": 1, "butter_pecan": 1, "banana": 1, "cherry": 2}],
+											"c": ["Pie", {"chocolate": 1, "vanilla": 2, "strawberry": 4, "cookies": 1, "mint": 0, "mocha": 1, "caramel": 3, "cookie_dough": 2, "pistachio": 2, "butter_pecan": 5, "banana": 4, "cherry": 5}],
+											"d": ["Pudding", {"chocolate": 5, "vanilla": 4, "strawberry": 2, "cookies": 3, "mint": 0, "mocha": 3, "caramel": 4, "cookie_dough": 1, "pistachio": 1, "butter_pecan": 1, "banana": 3, "cherry": 1}]
+										}
+						},
+					"5": {
+							"question": "If you worked at a carnival, what would your job be?",
+							"answers": {
+											"a": ["Serving food", {"chocolate": 3, "vanilla": 5, "strawberry": 4, "cookies": 1, "mint": 3, "mocha": 3, "caramel": 2, "cookie_dough": 3, "pistachio": 3, "butter_pecan": 4, "banana": 1, "cherry": 2}],
+											"b": ["Making animal balloons for kids", {"chocolate": 3, "vanilla": 1, "strawberry": 4, "cookies": 4, "mint": 3, "mocha": 2, "caramel": 4, "cookie_dough": 5, "pistachio": 2, "butter_pecan": 2, "banana": 3, "cherry": 5}],
+											"c": ["Ride operator", {"chocolate": 4, "vanilla": 3, "strawberry": 3, "cookies": 5, "mint": 2, "mocha": 3, "caramel": 3, "cookie_dough": 4, "pistachio": 3, "butter_pecan": 3, "banana": 4, "cherry": 2}],
+											"d": ["Game operator", {"chocolate": 3, "vanilla": 3, "strawberry": 2, "cookies": 3, "mint": 4, "mocha": 4, "caramel": 3, "cookie_dough": 2, "pistachio": 2, "butter_pecan": 1, "banana": 2, "cherry": 3}],
+											"e": ["Carnival makeup artist", {"chocolate": 1, "vanilla": 2, "strawberry": 4, "cookies": 4, "mint": 4, "mocha": 1, "caramel": 3, "cookie_dough": 4, "pistachio": 3, "butter_pecan": 2, "banana": 3, "cherry": 4}]
+										}
+						},
+					"6": {
+							"question": "How fast do you eat your ice cream?",
+							"answers": {
+											"a": ["Super fast; I don't mess around with ice cream!", {"chocolate": 4, "vanilla": 1, "strawberry": 3, "cookies": 4, "mint": 2, "mocha": 2, "caramel": 3, "cookie_dough": 4, "pistachio": 1, "butter_pecan": 2, "banana": 3, "cherry": 3}],
+											"b": ["Fast enough so that it doesn't melt", {"chocolate": 2, "vanilla": 4, "strawberry": 4, "cookies": 4, "mint": 2, "mocha": 2, "caramel": 3, "cookie_dough": 3, "pistachio": 3, "butter_pecan": 4, "banana": 3, "cherry": 3}],
+											"c": ["I savor it until it's dripping down the cone and down my chin", {"chocolate": 4, "vanilla": 1, "strawberry": 2, "cookies": 2, "mint": 3, "mocha": 1, "caramel": 3, "cookie_dough": 1, "pistachio": 3, "butter_pecan": 3, "banana": 4, "cherry": 2}]
+										}
+						},
+					"7": {
+							"question": "Are you the neat and organized type?",
+							"answers": {
+											"a": ["Yes, I am very neat and organized (perhaps a little too much so!)", {"chocolate": 1, "vanilla": 5, "strawberry": 4, "cookies": 3, "mint": 3, "mocha": 4, "caramel": 1, "cookie_dough": 1, "pistachio": 5, "butter_pecan": 3, "banana": 2, "cherry": 3}],
+											"b": ["Depends who you ask", {"chocolate": 3, "vanilla": 2, "strawberry": 3, "cookies": 3, "mint": 4, "mocha": 3, "caramel": 2, "cookie_dough": 2, "pistachio": 4, "butter_pecan": 4, "banana": 3, "cherry": 4}],
+											"c": ["Let's just say, I'm not very organized at all", {"chocolate": 4, "vanilla": 0, "strawberry": 1, "cookies": 4, "mint": 3, "mocha": 2, "caramel": 5, "cookie_dough": 5, "pistachio": 1, "butter_pecan": 2, "banana": 4, "cherry": 2}]
+										}
+						},
+					"8": {
+							"question": "What's your favorite activity on a rainy afternoon?",
+							"answers": {
+											"a": ["Reading a good book", {"chocolate": 1, "vanilla": 4, "strawberry": 3, "cookies": 3, "mint": 4, "mocha": 3, "caramel": 3, "cookie_dough": 1, "pistachio": 5, "butter_pecan": 2, "banana": 2, "cherry": 2}],
+											"b": ["Watching a good flick", {"chocolate": 4, "vanilla": 2, "strawberry": 4, "cookies": 4, "mint": 4, "mocha": 4, "caramel": 2, "cookie_dough": 4, "pistachio": 3, "butter_pecan": 5, "banana": 4, "cherry": 3}],
+											"c": ["Playing video games", {"chocolate": 3, "vanilla": 1, "strawberry": 2, "cookies": 3, "mint": 3, "mocha": 3, "caramel": 3, "cookie_dough": 4, "pistachio": 3, "butter_pecan": 3, "banana": 4, "cherry": 2}],
+											"d": ["Working on a project", {"chocolate": 2, "vanilla": 3, "strawberry": 1, "cookies": 2, "mint": 4, "mocha": 5, "caramel": 4, "cookie_dough": 1, "pistachio": 3, "butter_pecan": 2, "banana": 1, "cherry": 3}]
+										}
+						}
+				}
+							
+}
