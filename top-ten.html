@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Top Ten List Maker</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Top Ten List Maker">
+	<meta name="keywords" content="top ten list maker">
+	<meta name="author" content="Daniel Granovetter">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="portfolio.css">
+	<script src="scripts/portfolio.js"></script>
+	<script src="scripts/top-ten.js"></script>
+</head>
+<body onload="page.init()">
+	<div class="page">
+		<div id="top_bar"></div>
+		<header>
+			<div id="site_title">Daniel Granovetter</div>
+			<a href="projects.html">
+				<img src="images/laptop.png" id="laptop"></img>
+			</a>
+			<div class="dropdown_menu">
+				<span class="menu_button">Menu &#9660</span>
+			</div>
+		</header>
+		<div class="whitespace" id="w_top"></div>
+		<div class="bkgnd">
+			<div class="contents">
+				<nav>
+					<span class="nav_menu"></span>
+				</nav>
+				<section>
+					<div>
+						<h1 class="center">Top Ten List Maker</h1>
+						<div id="start_list">
+							<p>Enter ten items in any order, then hit the button to organize into a top ten list.</p>
+							<form>
+								Title: <input type="text" class="title"><br><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<input type="text" class="entry"><br>
+								<br>
+								<button type="button" onclick="createList()">Create List</button>
+							</form>
+						</div>
+						<div id="continue_list">
+							<h3>Which is better?</h3>
+							<form>
+								<input type="radio" name="choice" id="choice_a"></input>
+								<label for="choice_a" id="label_a"></label><br>
+								<input type="radio" name="choice" id="choice_b"></input>
+								<label for="choice_b" id="label_b"></label><br><br>
+								<button type="button" onclick="makeChoice()">Continue</button>
+							</form>
+						</div>
+						<div id="results">
+							<h3 id="list_title"></h3>
+							<ol type="1" id="final_list"></ol>
+						</div>
+						<p class="problem_red" id="problem_field"></p>
+					</div>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<div class="whitespace" id="w_bottom"></div>
+			<div id="bottom_bar"></div>
+			<div id="footer_text">© Daniel Granovetter</div>
+		</footer>
+	</div>
+</body>
+</html>

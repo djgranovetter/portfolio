@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Collage Maker</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Create your own collage and add text if desired">
+	<meta name="keywords" content="collage, meme, add text to image">
+	<meta name="author" content="Daniel Granovetter">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="portfolio.css">
+	<script src="scripts/portfolio.js"></script>
+</head>
+<body onload="page.init()">
+	<div class="page">
+		<div id="top_bar"></div>
+		<header>
+			<div id="site_title">Daniel Granovetter</div>
+			<a href="projects.html">
+				<img src="images/laptop.png" id="laptop"></img>
+			</a>
+			<div class="dropdown_menu">
+				<span class="menu_button">Menu &#9660</span>
+			</div>
+		</header>
+		<div class="whitespace" id="w_top"></div>
+		<div class="bkgnd">
+			<div class="contents">
+				<nav>
+					<span class="nav_menu"></span>
+				</nav>
+				<section>
+					<div>
+						<h1 class="center">Collage Maker</h2>
+						<div class="center" id="collage_maker">
+							<div id="form_container">
+								<form class="form" id="settings">
+									<fieldset>
+										<legend>Settings</legend>
+										Name:
+										<input type="text" class="input_text" id="collage_name" value="image">
+										Image size:
+										<select id="canvas_size" onchange="adjustCanvas()">
+											<option value="square">Square</option>
+											<option value="2x1">2x1</option>
+											<option value="3x2">3x2</option>
+											<option value="4x3">4x3</option>
+											<option value="16x9">16x9</option>
+										</select>
+										<br/>
+										Orientation:
+										<br/>
+										<input type="radio" name="orientation" id="landscape" onchange="adjustCanvas()" checked>
+										<label for="landscape">Landscape</label>
+										<input type="radio" name="orientation" id="portrait" onchange="adjustCanvas()">
+										<label for="portrait">Portrait</label>
+										<br/>
+										Choose image: <input type="file" id="img_file" accept=".png, .jpg, .jpeg" multiple="true">
+										<br/>
+										<button type="button" onclick="create()">Draw Image</button>
+										<button type="button" id="meme_button" onclick="doMeme()" disabled="true">Meme Image</button>
+										<button type="button" id="download_img" onclick="doDownload()" disabled="true">Download</button>
+										<br/>
+										<input type="checkbox" id="do_border" onchange="adjustImg()">
+										<label for="do_border">Add Border</label>
+										<div id="meme">
+											Top text: <input type="text" class="input_text" id="top_text" onblur="addText()">
+											<br/>
+											Bottom text: <input type="text" class="input_text" id="bottom_text" onblur="addText()">
+											<br/>
+											Text style:
+											<select id="text_style" onchange="addText()">
+												<option value="classic_meme">Classic Meme</option>
+												<option value="plain_text">Plain Text</option>
+											</select>
+											Size:
+											<select id="text_size" onchange="addText()">
+												<option value="very_large">Very Large</option>
+												<option value="large" selected="true">Large</option>
+												<option value="medium">Medium</option>
+												<option value="small">Small</option>
+												<option value="very_small">Very Small</option>
+											</select>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+							<br/><br/>
+							<canvas id="collage"></canvas>
+							<p class="problem_red" id="problem_field"></p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<div class="whitespace" id="w_bottom"></div>
+			<div id="bottom_bar"></div>
+			<div id="footer_text">© Daniel Granovetter</div>
+		</footer>
+	</div>
+	<script src="scripts/collage-maker.js"></script>
+</body>
+</html>

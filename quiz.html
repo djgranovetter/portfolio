@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Personality Quiz</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Ice Cream Personality Quiz">
+	<meta name="keywords" content="personality quiz, ice cream, which ice cream flavor are you">
+	<meta name="author" content="Daniel Granovetter">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="portfolio.css">
+	<script src="scripts/portfolio.js"></script>
+</head>
+<body onload="page.init()">
+	<div class="page">
+		<div id="top_bar"></div>
+		<header>
+			<div id="site_title">Daniel Granovetter</div>
+			<a href="projects.html">
+				<img src="images/laptop.png" id="laptop"></img>
+			</a>
+			<div class="dropdown_menu">
+				<span class="menu_button">Menu &#9660</span>
+			</div>
+		</header>
+		<div class="whitespace" id="w_top"></div>
+		<div class="bkgnd">
+			<div class="contents">
+				<nav>
+					<span class="nav_menu"></span>
+				</nav>
+				<section>
+					<div>
+						<h2 class="center">Personality Quiz</h2>
+						<div id="quiz">
+							<h3 class="quiz_title"></h3>
+							<p id="author"></p>
+							<img id="quiz_img"></img>
+							<h4 id="question_number"></h4>
+							<h3 id="question"></h3>
+							<ul id="choices"></ul>
+							<h3 id="result"></h3>
+							<p id="description">Sorry, there was an error loading the quiz.</p>
+							<button type="button" id="start_button" onclick="app.startQuiz()">Start Quiz</button>
+							<button type="button" id="retake_button" onclick="app.retakeQuiz()">Retake Quiz</button>
+						</div>
+						<br/>
+					</div>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<div class="whitespace" id="w_bottom"></div>
+			<div id="bottom_bar"></div>
+			<div id="footer_text">© Daniel Granovetter</div>
+		</footer>
+	</div>
+	<script src="scripts/quiz.js"></script>
+</body>
+</html>

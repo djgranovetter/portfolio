@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Wordsearch Generator</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Type in a list of words and generate a word search">
+	<meta name="keywords" content="word search generator">
+	<meta name="author" content="Daniel Granovetter">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="portfolio.css">
+	<script src="scripts/portfolio.js"></script>
+	<script src="scripts/wordsearch.js"></script>
+</head>
+<body onload="page.init()">
+	<div class="page">
+		<div id="top_bar"></div>
+		<header>
+			<div id="site_title">Daniel Granovetter</div>
+			<a href="projects.html">
+				<img src="images/laptop.png" id="laptop"></img>
+			</a>
+			<div class="dropdown_menu">
+				<span class="menu_button">Menu &#9660</span>
+			</div>
+		</header>
+		<div class="whitespace" id="w_top"></div>
+		<div class="bkgnd">
+			<div class="contents">
+				<nav>
+					<span class="nav_menu"></span>
+				</nav>
+				<section>
+					<div>
+						<h1 class="center">Word Search Maker</h2>
+						<p>Enter your words in the text field. Separate each word with a line break.</p>
+						<form>
+							<div class="flex_container">
+								<div class="child_container">
+									<textarea rows="10" id="word_list"></textarea><br>
+								</div>
+								<div class="child_container">
+									Size of word search: <input type="text" class="xy" id="x_cells" value="12"> squares times <input type="text" class="xy" id="y_cells" value="12"> squares<br><br>
+									<input type="checkbox" id="slant_words">
+									<label for="slant_words">Include slanted words</label><br>
+									<input type="checkbox" id="backwards_words">
+									<label for="backwards_words">Include backwards words</label><br>
+									<input type="checkbox" id="highlight" onclick="restore()">
+									<label for="highlight">Highlight words</label><br><br>
+									<button type="button" id="create_wordsearch" onclick="create()">Create Word Search</button>
+									<button type="button" id="save_wordsearch" onclick="doSave()" disabled="true">Save as Image</button>
+								</div>
+							</div>
+						</form>
+						<br>
+						<div id="word_search_space"></div>
+						<p class="problem_red" id="problem_field"></p>
+					</div>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<div class="whitespace" id="w_bottom"></div>
+			<div id="bottom_bar"></div>
+			<div id="footer_text">© Daniel Granovetter</div>
+		</footer>
+	</div>
+</body>
+</html>
