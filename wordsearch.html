@@ -36,7 +36,7 @@
 						<form>
 							<div class="flex_container">
 								<div class="child_container">
-									<textarea rows="10" id="word_list"></textarea><br>
+									<textarea rows="12" id="word_list"></textarea><br>
 								</div>
 								<div class="child_container">
 									Size of word search: <input type="text" class="xy" id="x_cells" value="12"> squares times <input type="text" class="xy" id="y_cells" value="12"> squares<br><br>
@@ -46,8 +46,8 @@
 									<label for="backwards_words">Include backwards words</label><br>
 									<input type="checkbox" id="highlight" onclick="restore()">
 									<label for="highlight">Highlight words</label><br><br>
-									<button type="button" id="create_wordsearch" onclick="create()">Create Word Search</button>
-									<button type="button" id="save_wordsearch" onclick="doSave()" disabled="true">Save as Image</button>
+									<button type="button" class="button" id="create_wordsearch" onclick="create()">Create Word Search</button>
+									<button type="button" class="button" id="save_wordsearch" onclick="doSave()" disabled="true">Save as Image</button>
 								</div>
 							</div>
 						</form>
