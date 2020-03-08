@@ -71,12 +71,17 @@ marquee span {
 }
 
 button {
-	background-color: royalblue;
+	background-color: #33ccff;
 	border: none;
 	color: white;
 	padding: 10px 24px;
 	text-decoration: none;
 	font-size: 16px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #00ace6;
 }
 
 form button {
