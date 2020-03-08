@@ -2,7 +2,16 @@
 
 const codeTester = {
 	doCode: function() {
-		let code = document.getElementById("code").value.replace(/\n/g, "' + \n'");
+		let arr = document.getElementById("code").value.split(/\n/);
+		let fragments = [];
+		let newArr = arr.map((item) => {
+			if (item.includes("//")) {
+				fragments = item.split("//");
+				item = fragments[0];
+			}
+			return item;
+		});
+		let code = newArr.join("");
 		let iframe = document.getElementsByTagName("iframe")[0].contentWindow;
 		let iScript = document.createElement("script");
 		iScript.innerHTML = "try {eval('" + code + "')} catch(e) {parent.document.getElementById('problem_field').innerHTML = e}";
