@@ -79,7 +79,7 @@ fieldset {
 	margin: 0;
 }
 
-input {
+input, select, button {
 	font-size: 16px;
 }
 
