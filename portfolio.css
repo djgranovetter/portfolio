@@ -90,7 +90,7 @@ textarea {
 
 iframe {
 	width: 100%;
-	height: 600px;
+	height: 480px;
 }
 
 footer {
@@ -265,9 +265,11 @@ footer {
 }
 
 .form {
-	display: block;
+	display: inline-block;
 	width: 90%;
 	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .form input {
@@ -288,7 +290,7 @@ footer {
 }
 
 #site_title {
-	font-family: "sigmar";
+	font-family: "Sigmar";
 	font-size: 36px;
 	line-height: 1.2em;
 	padding-top: 30px;
@@ -386,11 +388,11 @@ footer {
 
 #code {
 	width: 100%;
-	height: 600px;
+	height: 480px;
 	padding: 4px;
 	white-space: nowrap;
 	resize: none;
-	font-family: courier new;
+	font-family: "Courier New";
 	font-size: 16px;
 }
 
@@ -415,7 +417,7 @@ footer {
 }
 
 @font-face {
-    font-family: "sigmar";
+    font-family: "Sigmar";
     src: url("fonts/sigmar-one.ttf");
 }
 
@@ -433,7 +435,7 @@ footer {
 	.nav_menu {display: inline; white-space: nowrap;}
 	.menu_button {display: none;}
 	.child_container {width: 48%;}
-	.form {width: 66%; display: inline-block; margin-left: auto; margin-right: auto;}
+	.form {width: 66%;}
 	.img_large {width: 60%;}
 	.img_float {width: 20%;}
 	#site_title {font-size: 54px;}
