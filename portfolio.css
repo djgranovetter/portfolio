@@ -79,6 +79,10 @@ fieldset {
 	margin: 0;
 }
 
+input, select, button {
+	font-size: 16px;
+}
+
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -396,8 +400,8 @@ footer {
 	display: none;
 }
 
-#image_resizer {
-	text-align: center;
+#image_file {
+	width: 244px;
 }
 
 #memory_game {
