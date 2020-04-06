@@ -401,7 +401,7 @@ footer {
 }
 
 #image_file {
-	width: 244px;
+	width: 96px;
 }
 
 #memory_game {
@@ -444,5 +444,6 @@ footer {
 	#footer_text {position: relative; z-index: 1;}
 	#w_top {position: absolute; top: 240px; left: 0; right: 0; z-index: 0;}
 	#w_bottom {position: absolute; top: -72px; left: 0; right: 0; z-index: 0;}
+	#img_file {width: 244px;}
 	#description, #quiz_img, #question, #question_number {width: 66%;}
 }
