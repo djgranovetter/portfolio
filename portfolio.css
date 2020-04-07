@@ -401,7 +401,7 @@ footer {
 }
 
 #img_file {
-	max-width: 100%;
+	width: 200px;
 }
 
 #memory_game {
@@ -423,6 +423,10 @@ footer {
 
 @media only screen and (min-width: 1080px) {
 	#laptop {display: inline; width: 96px; position: absolute; top: 24px; right: 0;}
+}
+
+@media only screen and (min-width: 320px) {
+	#img_file {width: auto;}
 }
 
 @media only screen and (min-width: 768px) {
