@@ -150,8 +150,8 @@ function getData(type, url, callback) {
 	let data = null;
 	xhr.onreadystatechange = () => {
 		if (xhr.readyState == 4 && xhr.status == 200) {
-			if (type == "JSON" && xhr.responseText !== "") data = JSON.parse(xhr.responseText);
-			else if (type == "text") data = xhr.responseText;
+			if (type == "JSON" && xhr.response !== "") data = JSON.parse(xhr.response);
+			else if (type == "text") data = xhr.response;
 			callback(data);
 		}
 	}
