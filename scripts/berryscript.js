@@ -120,28 +120,6 @@ const dom = {
 				if (currentElem !== childElem) currentElem.style.display = "none";
 			}
 		}
-	},
-	exclusive: function(url, base, section) {
-		let iframe = dom.create({
-			elem: "iframe",
-			set: "src = " + url + ", frameBorder = 0, scrolling = no",
-			style: "width = 640px, height = 480px"
-		});
-		
-		dom.append(iframe, base);
-		
-		if (!section) return;
-		
-		iframe.onload = () => {
-			console.log(iframe.contentWindow.document.getElementById(section));
-		}
-		
-		return;
-		
-		let main = iframe.contentWindow.document.getElementById(section);
-		let body = iframe.contentWindow.document.getElementById(section).parentNode;
-		
-		dom.snatch(main, body);
 	}
 };
 
