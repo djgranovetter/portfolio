@@ -22,9 +22,9 @@ let app = {
 			description.innerHTML = this.quiz.description;
 			startQuiz.style.display = "inline-block";
 			
-			// Initiate handshake with website that is embedding this quiz
+			// Reconfigure layout in the event that quiz is accessed from within iframe
 			
-			window.parent.postMessage("Quiz loaded!", "*");
+			if (parent !== top) dom.snatch(dom.grab("section")[0], document.body);
 		});
 	},
 	startQuiz: function() {
