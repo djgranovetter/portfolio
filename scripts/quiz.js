@@ -24,7 +24,7 @@ let app = {
 			
 			// Reconfigure layout in the event that quiz is accessed from within iframe
 			
-			if (parent !== top) dom.snatch(dom.grab("section")[0], document.body);
+			dom.snatch(dom.grab("section")[0], document.body);
 		});
 	},
 	startQuiz: function() {
