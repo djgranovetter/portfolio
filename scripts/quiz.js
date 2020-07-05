@@ -21,6 +21,10 @@ let app = {
 			author.innerHTML = this.quiz.author;
 			description.innerHTML = this.quiz.description;
 			startQuiz.style.display = "inline-block";
+			
+			// Initiate handshake with website that is embedding this quiz
+			
+			window.parent.postMessage("Quiz loaded!", "*");
 		});
 	},
 	startQuiz: function() {
