@@ -28,7 +28,7 @@ let app = {
 				let section = dom.grab("section")[0];
 				dom.exclusive(section, dom.grab(".page")[0]);
 				
-				let arr = [document.body.clientWidth, document.body.clientHeight];
+				let arr = [window.innerWidth, window.innerHeight];
 				let str = arr.join(", ");
 				
 				window.parent.postMessage(str, "*");
