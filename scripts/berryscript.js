@@ -120,6 +120,12 @@ const dom = {
 				if (currentElem !== childElem) currentElem.style.display = "none";
 			}
 		}
+	},
+	exclusive: function(elem, ancestor = document.body) {
+		for (let i = 0; i < document.body.children.length; i ++) {
+			if (elem.parentNode == ancestor) break;
+			dom.snatch(elem, elem.parentNode);
+		}
 	}
 };
 
