@@ -24,7 +24,15 @@ let app = {
 			
 			// Reconfigure layout in the event that quiz is accessed from within iframe
 			
-			if (self !== top) dom.exclusive(dom.grab("section")[0], dom.grab(".page")[0]);
+			if (self !== top) {
+				let section = dom.grab("section")[0];
+				dom.exclusive(section, dom.grab(".page")[0]);
+				
+				let arr = [section.clientWidth, section.clientHeight];
+				let str = arr.join(", ");
+				
+				window.parent.postMessage(str, "*");
+			}
 		});
 	},
 	startQuiz: function() {
