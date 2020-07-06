@@ -122,10 +122,12 @@ const dom = {
 		}
 	},
 	exclusive: function(elem, ancestor = document.body) {
+		let arr = [];
 		for (let i = 0; i < document.body.children.length; i ++) {
+			arr.push(elem);
 			if (elem.parentNode == ancestor) break;
-			dom.snatch(elem, elem.parentNode);
 		}
+		dom.snatch.apply(null, arr);
 	}
 };
 
