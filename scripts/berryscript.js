@@ -22,14 +22,14 @@ const dom = {
 		}
 		let current = null;
 		if (obj.set) {
-			let set = obj.set.split(", ");
+			let set = obj.set.split(/,\s?(?=\w)/);
 			for (let i = 0; i < set.length; i ++) {
 				current = set[i].split(/\s?=\s?/);
 				elem.setAttribute(current[0], current[1]);
 			}
 		}
 		if (obj.style) {
-			let style = obj.style.split(", ");
+			let style = obj.style.split(/,\s?(?=\w)/);
 			let currentName = null, currentStyle = null;
 			let arr = [];
 			for (let i = 0; i < style.length; i ++) {
@@ -131,22 +131,30 @@ const dom = {
 
 const msg = {
 	x: window.matchMedia("(min-width: 768px)"),
-	answer: function(msg, callback = null) {
-		this.openMsg("answer", msg, callback);
+	answer: function(msg, callback = null, affirmative = "Okay") {
+		this.openMsg("answer", msg, callback, affirmative);
 	},
-	ask: function(msg, callback = null) {
-		this.openMsg("ask", msg, callback);
+	ask: function(msg, callback = null, affirmative = "Okay", negative = "Cancel") {
+		this.openMsg("ask", msg, callback, affirmative, negative);
 	},
-	inquire: function(msg, callback = null) {
-		this.openMsg("inquire", msg, callback);
+	inquire: function(msg, callback = null, affirmative = "Okay", negative = "Cancel") {
+		this.openMsg("inquire", msg, callback, affirmative, negative);
 	},
-	openMsg: function(type, msg, callback)  {
+	openMsg: function(type, msg, callback, affirmative, negative)  {
+		if (event.target.tagName == "BUTTON") event.target.blur();
+		
+		let overlayExists = dom.grab("#overlay");
+		let msgBoxExists = dom.grab("#msg_box");
+		
+		if (overlayExists !== null) overlayExists.remove();
+		if (msgBoxExists !== null) msgBoxExists.remove();
+		
 		this.doOverlay();
 		
 		let allOptions = [];
 		
-		allOptions[0] = "OK";
-		if (type == "ask" || type == "inquire") allOptions[1] = "Cancel";
+		allOptions[0] = affirmative;
+		if (type == "ask" || type == "inquire") allOptions[1] = negative;
 		
 		let widthSettings = "";
 		
@@ -156,7 +164,7 @@ const msg = {
 		let newMsgBox = dom.create({
 			elem: "div",
 			set: "id = msg_box",
-			style: "position = fixed, top = 33%, left = 50%, transform = translateX(-50%) translateY(-33%), width = fit-content, height = fit-content, " + 
+			style: "position = fixed, top = 33%, left = 50%, transform = translateX(-50%) translateY(-33%), min-width = 240px, height = fit-content, " + 
 			"padding = 16px, background-color = white, border = 1px solid, border-radius = 6px, box-shadow = 4px 4px black, font-size = 18px, " +
 			"overflow = hidden, z-index = 2, " + widthSettings
 		});
@@ -209,7 +217,7 @@ const msg = {
 			});
 			
 			if ((i - 1) == 0) {
-				addEventListener("keydown", this.enterKey);
+				addEventListener("keyup", this.enterKey);
 				
 				if (type !== "ask") newOption.addEventListener("click", callback);
 				else newOption.addEventListener("click", () => {
@@ -227,7 +235,9 @@ const msg = {
 		addEventListener("resize", this.doResize);
 	},
 	enterKey: function() {
-		if (event.keyCode == 13) dom.grab("#primary_option").click();
+		if (event.keyCode == 13) {
+			dom.grab("#primary_option").click();
+		}
 	},
 	getUserInput: function() {
 		let userInput = dom.grab("#ask_field").value;
@@ -237,7 +247,7 @@ const msg = {
 		dom.grab("#msg_box").remove();
 		dom.grab("#overlay").remove();
 		
-		removeEventListener("keydown", this.enterKey);
+		removeEventListener("keyup", this.enterKey);
 		removeEventListener("resize", this.doResize);
 	},
 	doResize: function() {
