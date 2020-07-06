@@ -123,9 +123,12 @@ const dom = {
 	},
 	exclusive: function(elem, ancestor = document.body) {
 		let arr = [];
-		for (let i = 0; i < document.body.children.length; i ++) {
-			arr.push(elem);
-			if (elem.parentNode == ancestor) break;
+		let current = elem;
+		let complete = false;
+		while (complete == false) {
+			if (current == ancestor) complete = true;
+			arr.push(current);
+			current = current.parentNode;
 		}
 		dom.snatch.apply(null, arr);
 	}
