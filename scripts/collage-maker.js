@@ -184,7 +184,7 @@ function doDownload() {
 	newCanvas.style.display = "none";
 	collageMaker.appendChild(newCanvas);
 	ctx = newCanvas.getContext("2d");
-	adjustCanvas(480, downloadImg.bind(null, collageName));
+	adjustCanvas(960, downloadImg.bind(null, collageName));
 }
 
 function downloadImg(imgName) {
