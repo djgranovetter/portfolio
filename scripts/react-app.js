@@ -39,9 +39,9 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Dilemma Resolver</h1>
+				<h1 class="center">Dilemma Resolver</h1>
 				<div>
-					<h3 class="center">Resolve any dilemma in 4 easy steps:</h3>
+					<h3>Resolve any dilemma in 4 easy steps:</h3>
 					<ol>
 						<li>Enter your dilemma</li>
 						<li>Enter the options you need to choose between. (You must have a minimum of two and a maximum of six.)</li>
