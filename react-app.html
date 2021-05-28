@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Daniel Granovetter</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="React App">
+	<meta name="keywords" content="Daniel Granovetter, React App">
+	<meta name="author" content="Daniel Granovetter">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="portfolio.css">
+	<style>
+		h1 {
+			color: green;
+		}
+		
+		h2 {
+			color: blue;
+		}
+		
+		table {
+			width: 100%;
+		}
+		
+		input {
+			width: 100%;
+			padding: 6px;
+		}
+		
+		select {
+			padding: 6px;
+		}
+		
+		button {
+			font-size: 16px;
+			margin-right: 1em;
+		}
+		
+		.main {
+			max-width: 600px;
+		}
+		
+		.add, .remove {
+			cursor: pointer;
+			user-select: none;
+		}
+		
+		.add {
+			color: blue;
+		}
+		
+		.remove {
+			color: red;
+		}
+	</style>
+	<script src="scripts/portfolio.js"></script>
+	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<script type="text/babel" src="scripts/react-app.js"></script>
+</head>
+<body onload="page.init()">
+	<div class="page">
+		<div id="top_bar"></div>
+		<header>
+			<div id="site_title">Daniel Granovetter</div>
+			<a href="projects.html">
+				<img src="images/laptop.png" id="laptop"></img>
+			</a>
+			<div class="dropdown_menu">
+				<span class="menu_button">Menu &#9660</span>
+			</div>
+		</header>
+		<div class="whitespace" id="w_top"></div>
+		<div class="bkgnd">
+			<div class="contents">
+				<nav>
+					<span class="nav_menu"></span>
+				</nav>
+				<section>
+					<div>
+						<div id="root"></div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<div class="whitespace" id="w_bottom"></div>
+			<div id="bottom_bar"></div>
+			<div id="footer_text">© Daniel Granovetter</div>
+		</footer>
+	</div>
+</body>
+</html>
