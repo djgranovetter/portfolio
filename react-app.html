@@ -48,6 +48,12 @@
 	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
 	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<script type="text/babel" src="scripts/react-app.js"></script>
+	<script>
+		function reactAppLoaded() {
+			document.getElementById("react_loading").style.display = "none";
+		}
+	</script>
 </head>
 <body onload="page.init()">
 	<div class="page">
@@ -85,17 +91,5 @@
 			<div id="footer_text">© Daniel Granovetter</div>
 		</footer>
 	</div>
-	<script>
-		const reactScript = document.createElement("script");
-		
-		document.body.appendChild(reactScript);
-		
-		reactScript.addEventListener("load", () => {
-			document.getElementById("react_loading").style.display = "none";
-		});
-		
-		reactScript.setAttribute("type", "text/babel");
-		reactScript.setAttribute("src", "scripts/react-app.js");
-	</script>
 </body>
 </html>
