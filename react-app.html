@@ -92,9 +92,9 @@
 		
 		document.body.appendChild(reactScript);
 		
-		reactScript.onload = () => {
+		reactScript.addEventListener("load", () => {
 			document.getElementById("react_loading").style.display = "none";
-		}
+		});
 		
 		reactScript.setAttribute("src", "scripts/react-app.js");
 	</script>
