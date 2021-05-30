@@ -88,14 +88,13 @@
 	<script>
 		const reactScript = document.createElement("script");
 		
-		reactScript.setAttribute("type", "text/babel");
-		
 		document.body.appendChild(reactScript);
 		
 		reactScript.addEventListener("load", () => {
 			document.getElementById("react_loading").style.display = "none";
 		});
 		
+		reactScript.setAttribute("type", "text/babel");
 		reactScript.setAttribute("src", "scripts/react-app.js");
 	</script>
 </body>
