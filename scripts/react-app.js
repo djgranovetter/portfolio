@@ -39,7 +39,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1 class="center">Dilemma Resolver</h1>
 				<div>
 					<h3>Resolve any dilemma in 4 easy steps:</h3>
 					<ol>
@@ -49,14 +48,16 @@ class App extends React.Component {
 						<li>Hit the Calculate button to determine which option you should go with. And now your dilemma is all resolved!</li>
 					</ol>
 				</div>
-				<form>
-					<div>
-						<strong>Dilemma</strong><br />
-						<input type="text" placeholder="Enter your dilemma" onChange={this.setDilemma} /><br /><br />
-						<Options dilemma={this.state.dilemma} winner={(message) => this.doWinner(message)} error={(message) => this.doError(message)} />
-						<div style={this.state.messageStyle}><strong>{this.state.message}</strong></div>
-					</div>
-				</form>
+				<div>
+					<form>
+						<div>
+							<strong>Dilemma</strong><br />
+							<input type="text" placeholder="Enter your dilemma" onChange={this.setDilemma} /><br /><br />
+							<Options dilemma={this.state.dilemma} winner={(message) => this.doWinner(message)} error={(message) => this.doError(message)} />
+							<div style={this.state.messageStyle}><strong>{this.state.message}</strong></div>
+						</div>
+					</form>
+				</div>
 			</div>
 		);
 	}
