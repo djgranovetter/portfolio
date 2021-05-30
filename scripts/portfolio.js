@@ -11,10 +11,10 @@ const page = {
 				topten: {name: "Top Ten List Maker", loc: "top-ten.html"}
 			}
 		},
+		reactJS: {name: "ReactJS", loc: "react-app.html"},
 		apps: {name: "Mobile Apps", loc: "https://play.google.com/store/apps/developer?id=DJ+Granovetter&hl=en_US"},
 		database: {name: "Database", loc: "database.html"},
-		certification: {name: "Certification", loc: "certification.html"},
-		jsConsole: {name: "Code Tester", loc: "code-tester.html"}
+		certification: {name: "Certification", loc: "certification.html"}
 	},
 	init: function() {
 		this.menu.start();
@@ -23,7 +23,7 @@ const page = {
 		footerText.innerHTML = "© " + year + " Daniel Granovetter";
 		let marquee = document.getElementsByTagName("marquee")[0];
 		if (marquee) {
-			let arr = ["HTML", "CSS", "JavaScript", "JSON", "Node JS", "PHP", "SQL", "MySQL"];
+			let arr = ["HTML", "CSS", "JavaScript", "JSON", "NodeJS", "ReactJS", "PHP", "SQL", "MySQL"];
 			for (let i = 0; i < arr.length; i ++) {
 				for (let j = 0; j < 2; j ++) {
 					let span = document.createElement("span");
