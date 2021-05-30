@@ -9,12 +9,8 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="portfolio.css">
 	<style>
-		h1 {
-			color: green;
-		}
-		
 		h2, h3 {
-			color: blue;
+			color: green;
 		}
 		
 		table {
@@ -33,14 +29,6 @@
 		button {
 			font-size: 16px;
 			margin-right: 1em;
-		}
-		
-		.main {
-			max-width: 600px;
-		}
-		
-		.center {
-			text-align: center;
 		}
 		
 		.add, .remove {
@@ -82,6 +70,11 @@
 				</nav>
 				<section>
 					<div>
+						<h1 class="center">Dilemma Resolver</h1>
+						<div class="center" id="react_loading">
+							<img class="react_logo" width="45%" src="images/react.gif"></img><br>
+							<div class="center" style="font-size: 20px; color: blue;"><strong>Loading React App...</strong></div>
+						</div>
 						<div id="root"></div>
 					</div>
 				</section>
@@ -93,5 +86,17 @@
 			<div id="footer_text">© Daniel Granovetter</div>
 		</footer>
 	</div>
+	<script>
+		const reactScript = document.createElement("script");
+		
+		reactScript.setAttribute("type", "text/babel");
+		reactScript.setAttribute("src", "scripts/react-app.js");
+		
+		document.body.appendChild(reactScript);
+		
+		reactScript.onload = () => {
+			document.getElementById("react_loading").style.display = "none";
+		}
+	</script>
 </body>
 </html>
