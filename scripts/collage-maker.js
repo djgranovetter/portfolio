@@ -3,7 +3,9 @@
 let canvas = document.getElementById("collage");
 let ctx = canvas.getContext("2d");
 
-let imgPlaced = false;
+let canvasImg = [];
+
+let imgPlaced = false, reverseImg = false;
 let topText = "", bottomText = "";
 
 let app = {
@@ -53,17 +55,27 @@ function create(callback) {
 		else orientation = "landscape";
 
 		if (imgFile) {
-			let canvasImg = [];
-
+			let imgList = [];
+			
 			function processImg() {
 				let reader = new FileReader();
 
 				reader.onload = () => {
 					canvasImg[counter] = new Image();
-					canvasImg[counter].src = reader.result;
+					imgList[counter] = reader.result;
 					counter++;
+					
 					if (counter < imgFile.files.length) processImg();
-					else canvasImg[imgFile.files.length - 1].onload = () => drawCollage();
+					else {
+						canvasImg = Array.from(canvasImg);
+						
+						if (reverseImg == true) imgList.reverse();
+						imgList.forEach((item, index) => {
+							canvasImg[index].src = item;
+						});
+						
+						canvasImg[imgFile.files.length - 1].onload = () => drawCollage();
+					}
 				}
 
 				let prefix = imgFile.files[counter].name.slice(imgFile.files[counter].name.lastIndexOf(".") + 1, imgFile.files[counter].name.length);
@@ -170,6 +182,11 @@ function drawImg(img, slot) {
 
 function adjustImg(callback) {
 	if (imgPlaced == true) create(callback);
+}
+
+function doReverse() {
+	if (reverseImg == true) reverseImg = false;
+	else reverseImg = true;
 }
 
 function doDownload() {
