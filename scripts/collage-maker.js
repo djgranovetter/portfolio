@@ -187,6 +187,8 @@ function adjustImg(callback) {
 function doReverse() {
 	if (reverseImg == true) reverseImg = false;
 	else reverseImg = true;
+	
+	create();
 }
 
 function doDownload() {
