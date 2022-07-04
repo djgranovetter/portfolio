@@ -303,7 +303,7 @@ function displayText(txtStr, txtX, txtY, txtFont, txtStyle, txtSize, txtAlign, t
 	
 	let addedFont = "", addedStyles = [];
 	
-	if (!txtStyles.includes("outline")) ctx.font = txtStyle + " " + txtSize + "px " + txtFont;
+	if (!txtStyle.includes("outline")) ctx.font = txtStyle + " " + txtSize + "px " + txtFont;
 	else {
 		addedStyles = textStyle.split(" ");
 		addedFont = "900 " + txtSize + "px " + txtFont;
