@@ -278,8 +278,8 @@ function insertText() {
 		displayText(topText, "auto", textPosition.top, "Arial", "outline", position("w", textSize), "center", textColor);
 		displayText(bottomText, "auto", textPosition.bottom, "Arial", "outline", position("w", textSize), "center", textColor);
 	} else if (textStyle.value == "comic_text") {
-		displayText(topText, "auto", textPosition.top, "Comic Neue", "outline", position("w", textSize), "center", textColor);
-		displayText(bottomText, "auto", textPosition.bottom, "Comic Neue", "outline", position("w", textSize), "center", textColor);
+		displayText(topText, "auto", textPosition.top, "Comic Neue", "bold outline", position("w", textSize), "center", textColor);
+		displayText(bottomText, "auto", textPosition.bottom, "Comic Neue", "bold outline", position("w", textSize), "center", textColor);
 	} else {
 		displayText(topText, "auto", textPosition.top, "Arial", "", position("w", textSize - 3), "center", textColor);
 		displayText(bottomText, "auto", textPosition.bottom, "Arial", "", position("w", textSize - 3), "center", textColor);
