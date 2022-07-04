@@ -144,9 +144,12 @@ function drawImg(img, slot) {
 	// Here we draw the image in such a way that it fits into its allotted space without being distorted
 	
 	if (typeof ctx == "undefined") return;
+	
 	let foo = null, bar = null, foobar = null, barfoo = null, orientation = {slot: null, img: null};
+	
 	if (slot.width >= slot.height) foo = (slot.height / slot.width).toFixed(2), orientation.slot = "landscape";
 	else foo = (slot.width / slot.height).toFixed(2), orientation.slot = "portrait";
+	
 	if (img.width >= img.height) bar = (img.height / img.width).toFixed(2), orientation.img = "landscape";
 	else bar = (img.width / img.height).toFixed(2), orientation.img = "portrait";
 
@@ -297,9 +300,21 @@ function position(p, f = 100) {
 
 function displayText(txtStr, txtX, txtY, txtFont, txtStyle, txtSize, txtAlign, txtColor) {
 	if (!ctx) return;
-	if (txtStyle !== "outline") ctx.font = txtStyle + " " + txtSize + "px " + txtFont;
+	
+	let addedFont = "", addedStyles = [];
+	
+	if (!txtStyles.includes("outline")) ctx.font = txtStyle + " " + txtSize + "px " + txtFont;
 	else {
-		ctx.font = "900 " + txtSize + "px " + txtFont;
+		addedStyles = textStyle.split(" ");
+		addedFont = "900 " + txtSize + "px " + txtFont;
+		
+		if (addedStyles.length > 1) {
+			addedStyles.pop();
+			txtStyle = addedStyles.join(" ");
+			addedFont = txtStyle + " " + addedFont;
+		}
+		
+		ctx.font = addedFont;
 		ctx.strokeStyle = "black";
 		ctx.miterLimit = 1;
 	}
