@@ -252,8 +252,20 @@ function insertText() {
 	}
 	textPosition.top = textMargin * ctx.canvas.height;
 	textPosition.bottom = ctx.canvas.height - (textMargin * ctx.canvas.height);
+	
 	let textStyle = document.getElementById("text_style");
 	let textSize = document.getElementById("text_size");
+	let textColor = document.getElementById("text_color");
+	
+	switch (textColor.value) {
+		case "white": textColor = "white"; break;
+		case "red": textColor = "#ff4d4d"; break;
+		case "green": textColor = "#00ff00"; break;
+		case "blue": textColor = "#4db8ff"; break;
+		case "orange": textColor = "#ffcc00"; break;
+		case "purple": textColor = "#cc99ff"; break;
+	}
+	
 	switch (textSize.value) {
 		case "very_large": textSize = 14; break;
 		case "large": textSize = 12; break;
@@ -261,12 +273,16 @@ function insertText() {
 		case "small": textSize = 8; break;
 		case "very_small": textSize = 6; break;
 	}
+	
 	if (textStyle.value == "classic_meme") {
-		displayText(topText, "auto", textPosition.top, "arial", "outline", position("w", textSize), "center", "white");
-		displayText(bottomText, "auto", textPosition.bottom, "arial", "outline", position("w", textSize), "center", "white");
+		displayText(topText, "auto", textPosition.top, "arial", "outline", position("w", textSize), "center", textColor);
+		displayText(bottomText, "auto", textPosition.bottom, "arial", "outline", position("w", textSize), "center", textColor);
+	} else if (textStyle.value == "comic_text") {
+		displayText(topText, "auto", textPosition.top, "comic sans ms", "outline", position("w", textSize), "center", textColor);
+		displayText(bottomText, "auto", textPosition.bottom, "comic sans ms", "outline", position("w", textSize), "center", textColor);
 	} else {
-		displayText(topText, "auto", textPosition.top, "arial", "", position("w", textSize - 3), "center", "white");
-		displayText(bottomText, "auto", textPosition.bottom, "arial", "", position("w", textSize - 3), "center", "white");
+		displayText(topText, "auto", textPosition.top, "arial", "", position("w", textSize - 3), "center", textColor);
+		displayText(bottomText, "auto", textPosition.bottom, "arial", "", position("w", textSize - 3), "center", textColor);
 	}
 }
 
