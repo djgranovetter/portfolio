@@ -305,7 +305,7 @@ function displayText(txtStr, txtX, txtY, txtFont, txtStyle, txtSize, txtAlign, t
 	
 	if (!txtStyle.includes("outline")) ctx.font = txtStyle + " " + txtSize + "px " + txtFont;
 	else {
-		addedStyles = textStyle.split(" ");
+		addedStyles = txtStyle.split(" ");
 		addedFont = "900 " + txtSize + "px " + txtFont;
 		
 		if (addedStyles.length > 1) {
