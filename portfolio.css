@@ -421,6 +421,11 @@ footer {
     src: url("fonts/sigmar-one.ttf");
 }
 
+@font-face {
+    font-family: "Comic";
+    src: url("fonts/comic.ttf");
+}
+
 @media only screen and (min-width: 1080px) {
 	#laptop {display: inline; width: 96px; position: absolute; top: 24px; right: 0;}
 }
