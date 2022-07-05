@@ -346,7 +346,7 @@ function displayText(txtStr, txtX, txtY, txtFont, txtStyle, txtSize, txtAlign, t
 	ctx.fillStyle = txtColor;
 	
 	let txtWidth = null;
-	let maxWidth = Math.round(0.95 * ctx.canvas.width),
+	let maxWidth = Math.round(0.90 * ctx.canvas.width),
 		maxLines = 3,
 		wordsPlaced = 0;
 	let txtArr = [];
