@@ -310,8 +310,8 @@ function insertText() {
 		displayText(topText, "auto", textPosition.top, "Arial", "outline", position("w", textSize), "center", textColor);
 		displayText(bottomText, "auto", textPosition.bottom, "Arial", "outline", position("w", textSize), "center", textColor);
 	} else if (textStyle.value == "comic_text") {
-		displayText(topText, "auto", textPosition.top, "Comic Sans MS", "outline", position("w", textSize), "center", textColor);
-		displayText(bottomText, "auto", textPosition.bottom, "Comic Sans MS", "outline", position("w", textSize), "center", textColor);
+		displayText(topText, "auto", textPosition.top, "Comic", "outline", position("w", textSize), "center", textColor);
+		displayText(bottomText, "auto", textPosition.bottom, "Comic", "outline", position("w", textSize), "center", textColor);
 	} else {
 		displayText(topText, "auto", textPosition.top, "Arial", "", position("w", textSize - 3), "center", textColor);
 		displayText(bottomText, "auto", textPosition.bottom, "Arial", "", position("w", textSize - 3), "center", textColor);
@@ -332,8 +332,6 @@ function position(p, f = 100) {
 
 function displayText(txtStr, txtX, txtY, txtFont, txtStyle, txtSize, txtAlign, txtColor) {
 	if (!ctx) return;
-	
-	txtStr = txtStr.split("").join(String.fromCharCode(8202));
 	
 	if (txtStyle !== "outline") ctx.font = txtStyle + " " + txtSize + "px " + txtFont;
 	else {
